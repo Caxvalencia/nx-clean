@@ -122,6 +122,61 @@
           }
         }
       }
+    },
+    "posts-core": {
+      "root": "libs/posts/core",
+      "sourceRoot": "libs/posts/core/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/posts/core/tsconfig.lib.json",
+              "libs/posts/core/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/posts/core/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/posts/core/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "posts-data": {
+      "projectType": "library",
+      "root": "libs/posts/data",
+      "sourceRoot": "libs/posts/data/src",
+      "prefix": "nx-clean",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/posts/data/tsconfig.lib.json",
+              "libs/posts/data/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/posts/data/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/posts/data/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "sass"
+        }
+      }
     }
   },
   "cli": {

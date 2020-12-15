@@ -29,6 +29,12 @@
     "clean-app-e2e": {
       "tags": [],
       "implicitDependencies": ["clean-app"]
+    },
+    "posts-core": {
+      "tags": []
+    },
+    "posts-data": {
+      "tags": []
     }
   }
 }

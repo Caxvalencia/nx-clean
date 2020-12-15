@@ -15,7 +15,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@migra/posts/core": ["libs/posts/core/src/index.ts"],
+      "@migra/posts/data": ["libs/posts/data/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

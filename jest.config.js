@@ -3,5 +3,6 @@ module.exports = {
     '<rootDir>/apps/clean-app',
     '<rootDir>/libs/posts/core',
     '<rootDir>/libs/posts/data',
+    '<rootDir>/libs/posts/presentation',
   ],
 };

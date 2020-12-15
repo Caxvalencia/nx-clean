@@ -177,6 +177,36 @@
           "style": "sass"
         }
       }
+    },
+    "posts-presentation": {
+      "projectType": "library",
+      "root": "libs/posts/presentation",
+      "sourceRoot": "libs/posts/presentation/src",
+      "prefix": "nx-clean",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/posts/presentation/tsconfig.lib.json",
+              "libs/posts/presentation/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/posts/presentation/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/posts/presentation/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "sass"
+        }
+      }
     }
   },
   "cli": {

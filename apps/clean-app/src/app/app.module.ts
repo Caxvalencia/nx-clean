@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { PostRepository } from '@migra/posts/core';
-import { ApiPostRepository, FakePostRepository } from '@migra/posts/data';
+import { ApiPostRepository } from '@migra/posts/data';
+import { PostsPresentationModule } from '@migra/posts/presentation';
 
 import { AppComponent } from './app.component';
 import { TodosRepository } from './core/todos/repositories/todos.repository';
 import { JsonTodosRepository } from './data/todos/repositories/json.todos.repository';
-import { PostListComponent } from './presentation/post/post-list/post-list.component';
 import { TodosComponent } from './presentation/todos/todos.component';
 
 @NgModule({
-  declarations: [AppComponent, TodosComponent, PostListComponent],
-  imports: [BrowserModule],
+  declarations: [AppComponent, TodosComponent],
+  imports: [BrowserModule, PostsPresentationModule],
   providers: [
     {
       provide: TodosRepository,

@@ -1,0 +1,8 @@
+<h1>Post List</h1>
+
+<div *ngFor="let post of postListService.posts$ | async">
+  <strong style="color: darkblue">Title:</strong>
+  <span style="color: darkviolet">{{ post.title }}</span>
+
+  <p style="color: darkolivegreen">{{ post.description }}</p>
+</div>
